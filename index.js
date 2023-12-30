@@ -1,5 +1,13 @@
-let a = document.getElementsByTagName('li');
-a[a.length-1].style.color = "blue";
-for(let i = 0; i < a.length ; i++){
-  a[i].style.fontStyle = "italic";
-}
+let a = document.querySelector(" #basket-heading ")
+a.style.color = "brown";
+let b = document.querySelector(" #header ")
+b.style.textAlign = "right";
+let c = document.querySelector("ul");
+c.style.backgroundColor = "grey";
+let d = document.querySelectorAll(".fruit");
+d[1].style.backgroundColor = "brown";
+d[1].style.color = "white";
+d[3].style.backgroundColor = "brown";
+d[3].style.color = "white";
+let r = document.querySelectorAll(".fruit");
+let t = document.querySelectorAll(".fruit");
