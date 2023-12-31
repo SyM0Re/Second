@@ -1,17 +1,27 @@
 let form = document.querySelector("form");
-form.style.fontFamily = "arial";
-form.style.backgroundColor = "gray";
-form.style.padding = "20px";
-form.style.borderRadius = "20px";
-let label = document.querySelector("label");
-label.style.fontWeight = "bold";
-label.style.fontSize = "20px";
-label.style.color = "blue";
-let input = document.querySelector("input");
-input.style.fontStyle = "italic";
-input.style.marginBottom = "20px";
-input.style.height = "20px";
-let button = document.querySelector("button");
-button.style.backgroundColor = "yellow";
-button.style.width = "225px";
-button.style.border = "1px solid yellow";
+let fruits = document.querySelector(".fruits");
+form.addEventListener("submit" , function(event) {
+    let editbutton = document.createElement("button");
+    editbutton.className = "edit-btn";
+    let editText = document.createTextNode("Edit");
+    editbutton.appendChild(editText);
+    event.preventDefault();
+    let inputText = document.getElementById("fruit-to-add");
+    let Newli = document.createElement("li");
+    let NewLiText = document.createTextNode(inputText.value);
+    Newli.appendChild(NewLiText);
+    Newli.className = "fruit";
+    let newbtn = document.createElement("button");
+    let btnText = document.createTextNode("x");
+    newbtn.appendChild(btnText);
+    newbtn.className = "delete-btn";
+    Newli.appendChild(newbtn);
+    Newli.appendChild(editbutton);
+    fruits.appendChild(Newli);
+})
+fruits.addEventListener("click" , function(event){
+    if(event.target.classList.contains("delete-btn")){
+        let ftd = event.target.parentElement;
+        fruits.removeChild(ftd);
+    };
+})
