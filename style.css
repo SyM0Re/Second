@@ -1,14 +1,11 @@
-body {
-  font-family: sans-serif;
-  -webkit-font-smoothing: auto;
-  -moz-font-smoothing: auto;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  font-smooth: always;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+form {
+  padding: 25px;
+  background-color: pink;
 }
-
-h1 {
-  font-size: 1.5rem;
+#name {
+  height: 25px;
+}
+.btn{
+  margin: 25px;
+  padding: 10px;
 }
