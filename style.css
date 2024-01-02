@@ -1,24 +1,15 @@
-// Write your code below:
-let li = document.createElement("li");
-let c = 0;
-function handleFormSubmit(event) {
-    c++;
-    event.preventDefault();
-    // Get user details from the form fields
-    const username=event.target.username.value;
-    const email=event.target.email.value;
-    const phone=event.target.phone.value;
-  
-    // Create an object with user details
-    const userDetails = {
-      username: username,
-      email: email,
-      phone: phone,
-    };    
-    // Convert the object to a JSON string and store it in local storage
-    let str = JSON.stringify(userDetails);
-    localStorage.setItem(`User Details ${c}` , str);
-    li.innerHTML = str;
-    document.querySelector(".list").appendChild(li);
-    console.log(li);
-  }
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
